@@ -47,7 +47,7 @@ POST /api/event
 ```
 
 ### Delete event
-DELETE /api/event
+DELETE /api/event/{event_uuid}
 {
-    "event_uuid": "60fddcef-aa2c-428d-b1a4-3c713537f014"
+    "email": "60fddcef-aa2c-428d-b1a4-3c713537f014"
 }

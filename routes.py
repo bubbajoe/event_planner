@@ -79,4 +79,11 @@ async def get_events(request: web.Request):
         return web.json_response(a)
 
 async def delete_event(request: web.Request):
-    pass
+    event_uuid = request.match_info['event_uuid']
+    with request.app['db_session']() as session:
+        
+        events = session.query(EventInviteRelation).filter(
+            EventInviteRelation.email == request.json()['email'],
+            EventInviteRelation.uuid == event_uuid).delete()
+        a = list(map(lambda e: e.to_dict(), events))
+        return web.json_response(a)
