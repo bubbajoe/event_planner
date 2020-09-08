@@ -1,0 +1,7 @@
+database_settings:
+  uri: sqlite:///events-api.db
+email_settings:
+  smtp_port: 587
+  smtp_server: smtp.gmail.com
+  email_address: CHAMGEME@gmail.com
+  email_password: CHANGEME

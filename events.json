@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Interview w/ Client",
+        "location": "Google Hangouts (meet.google.com/...)",
+        "starts_at": 1599559200,
+        "ends_at": 1599569200,
+        "host_email": "pm@company.com",
+        "invites": [
+            {
+                "email": "leaddev@company.com",
+                "name": "Lead Developer @ Company"
+            },
+            {
+                "email": "pm@client.com",
+                "name": "Project Manager @ Client Company"
+            }
+        ]
+    },
+    {
+        "name": "Extended Family Dinner",
+        "location": "Cook Out Night @ My House! (3094 Random Rd...)",
+        "starts_at": 1599559200,
+        "ends_at": 1599569200,
+        "host_email": "john@gmail.com",
+        "invites": [
+            {
+                "name": "Brandon K.",
+                "email": "brandonk@gmail.com"
+            },
+            {
+                "name": "Kim G.",
+                "email": "kimg@gmail.com"
+            }
+        ]
+    }
+]
