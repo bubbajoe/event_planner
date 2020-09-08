@@ -3,6 +3,8 @@
 
 # Starting the Application?
 
+Python 3.8 Recommended!
+
 1. Edit the `config.yml` and add your gmail login credentials automated
 
 1. Install dependencies
@@ -17,8 +19,10 @@
 
 `python3 server.py`
 
-# API
+# REST API Docs
 
+### Get all events
+GET /api/event
 
 ### Create event
 POST /api/event
@@ -42,8 +46,8 @@ POST /api/event
 }
 ```
 
-
-### Get all events
-GET /api/event
-
-###
+### Delete event
+DELETE /api/event
+{
+    "event_uuid": "60fddcef-aa2c-428d-b1a4-3c713537f014"
+}
