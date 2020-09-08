@@ -46,7 +46,7 @@ swagger.add_routes([
     # Create events
     web.post("/api/event", post_event),
 
-    web.delete("/api/event", delete_event)
+    web.delete("/api/event/{event_uuid}", delete_event)
 
     # Not Setup: Reply to an event (accept, decline, etc...)
     # web.post("/api/event/{event_uuid}/{status}", None),

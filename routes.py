@@ -80,8 +80,12 @@ async def get_events(request: web.Request):
 
 async def delete_event(request: web.Request):
     event_uuid = request.match_info['event_uuid']
+    data = await request.json()
     with request.app['db_session']() as session:
-        session.query(EventInviteRelation).filter(
-            EventInviteRelation.email == request.json()['email'],
+        removed = session.query(EventInviteRelation).filter(
+            EventInviteRelation.email == data['email'],
             EventInviteRelation.uuid == event_uuid).delete()
-        return web.json_response()
+        if removed:
+            return web.json_response({'removed': True})
+        else:
+            return web.json_response({'removed': False}, status=404)

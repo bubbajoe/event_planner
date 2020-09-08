@@ -24,6 +24,8 @@ Python 3.8 Recommended!
 ### Get all events
 GET /api/event
 
+returns all events
+
 ### Create event
 POST /api/event
 ```
@@ -45,9 +47,16 @@ POST /api/event
     ]
 }
 ```
+returns the same event
 
 ### Delete event
 DELETE /api/event/{event_uuid}
+```
 {
     "email": "60fddcef-aa2c-428d-b1a4-3c713537f014"
 }
+```
+
+```
+{'removed': True}
+```

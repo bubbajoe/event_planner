@@ -133,7 +133,7 @@ if __name__ == "__main__":
             # Add invite emails to the event
             for invite in event_data['invites']:
                 event_invite = EventInviteRelation(
-                    interview.uuid, invite['name'], invite['email'])
+                    interview.uuid, invite['email'], invite['name'],)
                 sess.add(event_invite)
             sess.flush()
             print(interview.to_dict())
