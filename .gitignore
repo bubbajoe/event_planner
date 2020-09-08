@@ -1,3 +1,4 @@
 events-api.db
 .vscode/
 __pycache__
+.DS_Store
